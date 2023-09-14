@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pre.css">
+    <title>Webbsida</title>
+</head>
+<body>
+
+<div class="box">
+    <img src="tja.JPG" alt="Bild På mig" class="box-img">
+    <h1>Mohamed Osman</h1>
+    <h2>Blivande webbutvecklare</h2>
+    <p>Student på Jensen Education</p>
+    <p>Jag är energisk, praktisk och älskar att ta initiativ. Min passion är att lösa problem, där min förmåga att tänka snabbt och anpassa mig till förändringar kommer väl till pass. Jag är redo att skapa innovativa och användarvänliga webblösningar. <br> Det ska jag göra genom att använda tre verktyg!</p>
+
+    <ul> 
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVASCRIPT</li>
+    </ul>
+    <p>Vill du komma i kontakt med mig kan du nå mig på Twitter (X). - Länk nedan, eller så skriver du i formuläret, så kontaktar jag dig!</p>
+    <p id="blackbackground"> 
+        <a href="https://twitter.com/lacagtakeen" target="_blank">Link to X</a>
+    </p>
+    
+    <!-- Formulär -->
+    <form id="form" name="form" method="post">
+        <br>
+        Förnamn:<br>
+        <input type="text" name="fnamn" id="fnamn" /> <br>
+        
+        Efternamn:<br>
+        <input type="text" name="enamn" id="enamn" /> <br>
+        
+        E-postadress:<br>
+        <input type="text" name="epost" id="epost" /> <br>
+        
+        Meddelande:<br>
+        <textarea name="meddelande" id="meddelande" cols="45" rows="5"></textarea> <br>
+        
+        <input type="submit" name="skicka" id="skicka" value="Skicka meddelandet" />
+    </form>
+    
+    <!-- Bekräftelsemeddelande (initialt dolt) -->
+    <div id="confirmation" style="display: none;">
+        Tack för ditt meddelande! Det har skickats.
+    </div>
+    
+    <script>
+        // Lägg till händelsehantering för formuläret
+        var form = document.getElementById("form");
+        form.addEventListener("submit", function (event) {
+            // Förhindra standardformulärhantering (sidan omdirigeras inte)
+            event.preventDefault();
+            
+            // Visa bekräftelsemeddelandet
+            var confirmationMessage = document.getElementById("confirmation");
+            confirmationMessage.style.display = "block";
+        });
+    </script>
+</div>
+</body>
+</html>
