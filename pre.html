@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="pre.css">
     <title>Webbsida</title>
 </head>
+<!-- Body, visar det synliga materialet på sidan -->
 <body>
 
 <div class="box">
@@ -15,6 +16,7 @@
     <p>Student på Jensen Education</p>
     <p>Jag är energisk, praktisk och älskar att ta initiativ. Min passion är att lösa problem, där min förmåga att tänka snabbt och anpassa mig till förändringar kommer väl till pass. Jag är redo att skapa innovativa och användarvänliga webblösningar. <br> Det ska jag göra genom att använda tre verktyg!</p>
 
+     <!-- Här har jag gjort en lista -->
     <ul> 
         <li>HTML</li>
         <li>CSS</li>
@@ -43,16 +45,17 @@
         <input type="submit" name="skicka" id="skicka" value="Skicka meddelandet" />
     </form>
     
-    <!-- Bekräftelsemeddelande (initialt dolt) -->
+    <!-- Meddelande som bekräftar (från början dolt) Jag har använd id för att kunna skilja den från mina classes
+         för att kunna göra enklare justeringar i efterhand. -->
     <div id="confirmation" style="display: none;">
         Tack för ditt meddelande! Det har skickats.
     </div>
     
     <script>
-        // Lägg till händelsehantering för formuläret
+        // Jag lägger till händelsehantering för formuläret
         var form = document.getElementById("form");
         form.addEventListener("submit", function (event) {
-            // Förhindra standardformulärhantering (sidan omdirigeras inte)
+            // Förhindrar att sidan omdirigeras
             event.preventDefault();
             
             // Visa bekräftelsemeddelandet
