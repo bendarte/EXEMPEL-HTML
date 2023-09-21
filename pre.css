@@ -5,6 +5,7 @@ body {
     background: url(bakgrundsbild2.jpg) no-repeat;
     background-size: cover;
     display: block;
+    
 
 }
 /* Jag byggde en box för att göra sidan enkel att justera. */
@@ -51,12 +52,29 @@ p{
     padding: 10px;
     margin-top: 10px;
     margin-bottom: -10px;
-}
+} 
+
+/* Holger du bad om tre olika brytpunkter. Här är Mobilbrytpunkt (max-width: 768px) */
 @media screen and (max-width: 768px) {
-.box {
+    .box {
+      display: block;
+      
+    }
+  }
+  
+  /* brytpunkt för Ipad (min-width: 769px) och (max-width: 1024px) */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .box {
     display: block;
-}
-}
+      }
+  }
+  
+  /* Brytpunkt för dator (min-width: 1025px) */
+  @media screen and (min-width: 1025px) {
+    .box {
+ display: block;
     
+    }
+  } 
 
 
